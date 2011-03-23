@@ -11,7 +11,7 @@
  * @license   http://thomas.ernest.fr/developement/php_cs/licence GNU General Public License
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-
+require_once __DIR__ . '/../../AbstractClosingCommentSniff.php';
 if (class_exists('CodeIgniter_Sniffs_Files_AbstractClosingCommentSniff', true) === false) {
     $error = 'Class CodeIgniter_Sniffs_Files_AbstractClosingCommentSniff not found';
     throw new PHP_CodeSniffer_Exception($error);
