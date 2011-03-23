@@ -44,7 +44,7 @@ if (class_exists('CodeIgniter_Sniffs_Files_AbstractClosingCommentSniff', true) =
  */
 class CodeIgniter_Sniffs_Files_ClosingLocationCommentSniff extends CodeIgniter_Sniffs_Files_AbstractClosingCommentSniff
 {
-    public $applicationRoot = '/application/';
+    public static $applicationRoot = '/application/';
 
     /**
      * Returns an array of tokens this test wants to listen for.
@@ -172,7 +172,7 @@ class CodeIgniter_Sniffs_Files_ClosingLocationCommentSniff extends CodeIgniter_S
     {
         $appRoot = PHP_CodeSniffer::getConfigData('ci_application_root');
         if (null === $appRoot) {
-            $appRoot = $this->applicationRoot;
+            $appRoot = self::$applicationRoot;
         }
         return $appRoot;
     }//end _getAppRoot()
